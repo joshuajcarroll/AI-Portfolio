@@ -1,8 +1,10 @@
+import HeroSection from "./sections/HeroSection";
+
 async function PortfolioContent() {
   return (
     <>
-      {/*<HeroSection />
-      <AboutSection />
+      <HeroSection />
+      {/*<AboutSection />
       <TestimonialsSection />
       <SkillsSection />
       <ExperienceSection />
