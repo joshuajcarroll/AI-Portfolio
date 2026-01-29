@@ -11,6 +11,9 @@ importers:
       '@clerk/nextjs':
         specifier: ^6.36.7
         version: 6.36.7(next@16.1.1(@babel/core@7.28.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@openai/chatkit-react':
+        specifier: ^1.4.3
+        version: 1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@radix-ui/react-dialog':
         specifier: ^1.1.15
         version: 1.1.15(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1698,6 +1701,15 @@ packages:
 
   '@octokit/types@13.10.0':
     resolution: {integrity: sha512-ifLaO34EbbPj0Xgro4G5lP5asESjwHracYJvVaPIyXMuiuXLlhic3S47cBdTb+jfODkTE5YtGCLt3Ay3+J97sA==}
+
+  '@openai/chatkit-react@1.4.3':
+    resolution: {integrity: sha512-Y/isbMh2CSFTtg2oL7FbmsfAnGGS6PDESQkjH9AJ42/TNGxAF53FIZM19PmrhdUq2QLkEzAf6adQ+pu8GO0Yhw==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
+  '@openai/chatkit@1.5.0':
+    resolution: {integrity: sha512-F9G91ZNq7bmDsoP4ToDWmv1FMZx2bLZ6WHf+YsKvQ8uw+PBRdkaRGG4WlalnnRl0ekQLhVB1kNjsWcQJpzalUg==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -7338,6 +7350,14 @@ snapshots:
   '@octokit/types@13.10.0':
     dependencies:
       '@octokit/openapi-types': 24.2.0
+
+  '@openai/chatkit-react@1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@openai/chatkit': 1.5.0
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  '@openai/chatkit@1.5.0': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
