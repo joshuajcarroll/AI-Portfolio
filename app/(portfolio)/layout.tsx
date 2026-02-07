@@ -7,6 +7,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import SidebarToggle from "@/components/SideBarToggle";
 import Script from "next/script";
+import { FloatingDock } from "@/components/FloatingDock";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,7 @@ export default function RootLayout({
           <SidebarProvider defaultOpen={false}>
             <SidebarInset>{children}</SidebarInset>
             <AppSidebar side="right" />
-            {/*FloatingDock />*/}
+            <FloatingDock />
             <SidebarToggle />
             {/* Mode Toggle - Desktop: bottom right next to AI chat, Mobile: top right next to burger menu */}
             {/*<div className="fixed md:bottom-6 md:right-24 top-4 right-18 md:top-auto md:left-auto z-20">
