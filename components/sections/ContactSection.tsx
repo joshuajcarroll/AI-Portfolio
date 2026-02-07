@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { defineQuery } from "next-sanity";
-import WorldMapDemo from "@/components//ui/world-map";
+import WorldMapDemo from "@/components/ui/world-map-demo";
 import { sanityFetch } from "@/sanity/lib/live";
 import { ContactForm } from "./ContactForm";
+import WorldMap from "../ui/world-map";
 
 const PROFILE_QUERY = defineQuery(`*[_id == "singleton-profile"][0]{
   email,
