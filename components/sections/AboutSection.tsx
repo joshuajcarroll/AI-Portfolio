@@ -3,22 +3,6 @@ import Link from "next/link";
 import { defineQuery } from "next-sanity";
 import { sanityFetch } from "@/sanity/lib/live";
 
-type Stat = {
-  label: string;
-  value: number | string;
-};
-
-type Profile = {
-  firstName: string;
-  lastName: string;
-  fullBio: string;
-  yearsOfExperience: number;
-  stats: Stat[];
-  email?: string;
-  phone?: string;
-  location?: string;
-};
-
 const ABOUT_QUERY = defineQuery(`*[_id == "singleton-profile"][0]{
   firstName,
   lastName,
@@ -113,7 +97,7 @@ export async function AboutSection() {
         {profile.stats && profile.stats.length > 0 && (
           <div className="@container mt-12 pt-12 border-t">
             <div className="grid grid-cols-2 @lg:grid-cols-4 gap-6">
-              {profile.stats.map((stat: Stat, idx: number) => (
+              {profile.stats.map((stat, idx) => (
                 <div
                   key={`${stat.label}-${idx}`}
                   className="@container/stat text-center"
